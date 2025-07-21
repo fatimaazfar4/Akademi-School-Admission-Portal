@@ -1,3 +1,9 @@
+import ActivityContainer from "../components/ActivityContainer";
+
 export default function LatestActivity() {
-  return <h1>Latest Activity Page</h1>;
+  return (
+    <>
+      <ActivityContainer />
+    </>
+  );
 }
