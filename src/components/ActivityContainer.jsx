@@ -85,7 +85,7 @@ export default function ActivityContainer() {
   ];
 
   return (
-    <div className=" bg-[#FFFFFF]  ">
+    <div className=" bg-[#FFFFFF] w-full h-screen max-w-7xl max-h-80 rounded-xl   ">
       {Logs.map((log, index) => {
         return (
           <div key={index}>
