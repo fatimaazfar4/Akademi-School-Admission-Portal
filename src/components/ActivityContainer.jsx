@@ -38,7 +38,7 @@ export default function ActivityContainer() {
 
         {
           Date: "Monday, June 31 2020",
-          Person: "Samantha William",
+          Person: "Samantha William ",
           Type: "Files",
           For: "Art Class",
           Event: "add 4 files on  ",
@@ -48,10 +48,10 @@ export default function ActivityContainer() {
 
         {
           Date: "Monday, June 31 2020",
-          Person: "You",
+          Person: "You ",
           Type: "Done",
           For: "Biology Homework",
-          Event: "has moved  task to ",
+          Event: "have moved  task to ",
           Color: "Green",
           Files: [],
         },
@@ -73,7 +73,7 @@ export default function ActivityContainer() {
 
         {
           Date: "Monday, June 31 2020",
-          Person: "Johnny Ahmad",
+          Person: "Johnny Ahmad ",
           Type: "message",
           For: "Art Class  Homework",
           Event: "mentioned you at ",
