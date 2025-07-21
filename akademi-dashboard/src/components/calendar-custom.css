@@ -1,0 +1,41 @@
+/* calendar-custom.css */
+.react-calendar {
+  border: none;
+  width: 100%;
+  font-family: inherit;
+  border-radius: 1rem; /* rounded-xl */
+  background-color: #ffffff;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Header labels: Sun, Mon, etc. */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #9ca3af; /* text-gray-400 */
+}
+
+/* Optional: reduce line height of weekdays */
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5rem 0;
+}
+
+/* Current date styling */
+.react-calendar__tile--now {
+  background: transparent;
+}
+
+/* Highlighted tiles */
+.react-calendar__tile.highlight {
+  background: #4f46e5 !important;
+  color: white !important;
+  border-radius: 9999px; /* full rounded (circle) */
+}
+
+/* Selected tile hover effect */
+.react-calendar__tile:hover {
+  background-color: #f3f4f6; /* gray-100 */
+  border-radius: 9999px;
+}
