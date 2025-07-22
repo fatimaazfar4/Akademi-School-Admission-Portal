@@ -36,7 +36,7 @@ export default function Activity({ Act, i }) {
           <div className=" ml-1.5 -mt-1 border-l border-[#A098AE]  "></div>
         )}
 
-        <div className={` ${i ? "ml-10 " : ""}  my-3`}>
+        <div className={` ${i ? "ml-10 " : ""}  mt-2 mb-3`}>
           <p className=" text-[#363B64] mb-4 text-[16px] ">
             <span
               className={` font-bold ${
