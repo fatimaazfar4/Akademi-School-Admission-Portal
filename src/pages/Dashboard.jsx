@@ -100,91 +100,76 @@ export default function Dashboard() {
       </div> {/* End of Left/Main Column */}
 
       {/* Right Column: For "Recent Students" and "Messages", and now "Current Foods Menu" */}
-      <div className="lg:col-span-1 space-y-6">
-        {/* Recent Students Section */}
-        <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-          <div className="flex items-start justify-between mb-4">
-            <div>
-              <h3 className="text-xl font-bold text-gray-800">Recent Students</h3>
-              <p className="text-sm text-gray-500">You have 456 students</p>
+      <div
+  className="bg-white rounded-2xl shadow-md p-6 font-poppins"
+  style={{
+    width: "468px",
+    height: "1800px",
+    border: "2px solid #C1BBEB",
+    opacity: 1,
+    transform: "rotate(0deg)",
+  }}
+>
+  {/* Recent Students + Messages inside single unified box */}
+  <div className="flex flex-col space-y-6">
+    {/* Recent Students */}
+    <div>
+      <div className="flex items-start justify-between mb-4">
+        <div>
+          <h3 className="text-sm font-bold text-gray-800 leading-none">Recent Students</h3>
+          <p className="text-sm font-normal text-gray-500 leading-none">You have 456 students</p>
+        </div>
+        <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#5D3FD3] text-white shadow-md hover:bg-[#4F33B2] transition-colors">
+          <Plus size={20} />
+        </button>
+      </div>
+
+      <div className="space-y-4">
+        {[
+          { name: "Samantha William", class: "Class VII A", filled: false },
+          { name: "Tony Soap", class: "Class VII A", filled: true },
+          { name: "Karen Hope", class: "Class VII A", filled: false },
+          { name: "Jordan Nico", class: "Class VII B", filled: false },
+          { name: "Nadlia Adja", class: "Class VII B", filled: false },
+        ].map((student, idx) => (
+          <div key={idx} className="flex items-center justify-between">
+            <div className="flex items-center">
+              <div className="w-11 h-11 bg-[#E0E2FF] rounded-full mr-3 flex-shrink-0"></div>
+              <div>
+                <p className="text-sm font-bold text-gray-900 leading-none">{student.name}</p>
+                <p className="text-sm font-normal text-gray-500 leading-none">{student.class}</p>
+              </div>
             </div>
-            <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#5D3FD3] text-white shadow-md hover:bg-[#4F33B2] transition-colors">
-              <Plus size={20} />
+            <button
+              className={`w-10 h-10 flex items-center justify-center rounded-full ${
+                student.filled
+                  ? "bg-[#5D3FD3] text-white hover:bg-[#4F33B2]"
+                  : "bg-[#E0E2FF] text-[#5D3FD3] hover:bg-[#D4D7FF]"
+              } transition-colors flex-shrink-0`}
+            >
+              <Mail size={20} />
             </button>
           </div>
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <div className="w-11 h-11 bg-[#E0E2FF] rounded-full mr-3 flex-shrink-0"></div>
-                <div>
-                  <p className="font-semibold text-gray-900">Samantha William</p>
-                  <p className="text-sm text-gray-500">Class VII A</p>
-                </div>
-              </div>
-              <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#E0E2FF] text-[#5D3FD3] hover:bg-[#D4D7FF] transition-colors flex-shrink-0">
-                <Mail size={20} />
-              </button>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <div className="w-11 h-11 bg-[#E0E2FF] rounded-full mr-3 flex-shrink-0"></div>
-                <div>
-                  <p className="font-semibold text-gray-900">Tony Soap</p>
-                  <p className="text-sm text-gray-500">Class VII A</p>
-                </div>
-              </div>
-              <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#5D3FD3] text-white hover:bg-[#4F33B2] transition-colors flex-shrink-0">
-                <Mail size={20} />
-              </button>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <div className="w-11 h-11 bg-[#E0E2FF] rounded-full mr-3 flex-shrink-0"></div>
-                <div>
-                  <p className="font-semibold text-gray-900">Karen Hope</p>
-                  <p className="text-sm text-gray-500">Class VII A</p>
-                </div>
-              </div>
-              <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#E0E2FF] text-[#5D3FD3] hover:bg-[#D4D7FF] transition-colors flex-shrink-0">
-                <Mail size={20} />
-              </button>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <div className="w-11 h-11 bg-[#E0E2FF] rounded-full mr-3 flex-shrink-0"></div>
-                <div>
-                  <p className="font-semibold text-gray-900">Jordan Nico</p>
-                  <p className="text-sm text-gray-500">Class VII B</p>
-                </div>
-              </div>
-              <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#E0E2FF] text-[#5D3FD3] hover:bg-[#D4D7FF] transition-colors flex-shrink-0">
-                <Mail size={20} />
-              </button>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <div className="w-11 h-11 bg-[#E0E2FF] rounded-full mr-3 flex-shrink-0"></div>
-                <div>
-                  <p className="font-semibold text-gray-900">Nadlia Adja</p>
-                  <p className="text-sm text-gray-500">Class VII B</p>
-                </div>
-              </div>
-              <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#E0E2FF] text-[#5D3FD3] hover:bg-[#D4D7FF] transition-colors flex-shrink-0">
-                <Mail size={20} />
-              </button>
-            </div>
-          </div>
-          <button className="w-full py-3 mt-6 text-lg font-semibold text-[#5D3FD3] bg-[#F3F4F6] rounded-xl hover:bg-[#E9EBEE] transition-colors">
-            View More
-          </button>
-        </div>
-
-        {/* Messages Section */}
-        <MessagesCard />
-
-        {/* Current Foods Menu - New Component */}
-        <FoodsMenuCard />
+        ))}
       </div>
+
+      <button className="w-full py-3 mt-6 text-sm font-bold text-[#5D3FD3] bg-[#F3F4F6] rounded-xl hover:bg-[#E9EBEE] transition-colors">
+        View More
+      </button>
+    </div>
+
+    {/* Messages (no outer box here) */}
+    <div>
+      <MessagesCard noWrapper />
+    </div>
+  </div>
+
+  {/* Foods Menu Card (if needed below) */}
+  <div className="mt-6">
+    <FoodsMenuCard noWrapper />
+  </div>
+</div>
+      {/* End of Right Column */}
     </div>
   );
 }

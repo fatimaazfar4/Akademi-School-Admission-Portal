@@ -12,34 +12,42 @@ const links = [
 
 export default function Sidebar() {
   return (
-    <aside className="w-64 h-full bg-white border-r shadow-sm flex flex-col justify-between">
-      <div>
-        <div className="p-6 border-b">
-          <h1 className="text-xl font-bold text-gray-800">Akademi</h1>
-        </div>
-        <nav className="flex flex-col gap-1 mt-4 px-2">
-          {links.map(({ to, label, icon }) => (
-            <NavLink
-              key={to}
-              to={to}
-              className={({ isActive }) =>
-                `flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition ${
-                  isActive
-                    ? "bg-blue-100 text-blue-600"
-                    : "text-gray-700 hover:bg-gray-100"
-                }`
-              }
-            >
-              {icon}
-              {label}
-            </NavLink>
-          ))}
-        </nav>
-      </div>
+    <aside
+  className="bg-[#5B4FFF] text-white flex flex-col justify-between"
+  style={{
+    width: "345px",
+    height: "1155px",
+    opacity: 1,
+    transform: "rotate(0deg)",
+  }}
+>
+  <div>
+    <div className="p-6 border-b border-white/20">
+      <h1 className="text-xl font-bold">Akademi</h1>
+    </div>
+    <nav className="flex flex-col gap-1 mt-4 px-2">
+      {links.map(({ to, label, icon }) => (
+        <NavLink
+          key={to}
+          to={to}
+          className={({ isActive }) =>
+            `flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition ${
+              isActive
+                ? "bg-white/20 text-white"
+                : "text-white hover:bg-white/10"
+            }`
+          }
+        >
+          {icon}
+          {label}
+        </NavLink>
+      ))}
+    </nav>
+  </div>
 
-      <div className="p-4 text-sm text-gray-400">
-        © 2025 Akademi
-      </div>
-    </aside>
+  <div className="p-4 text-xs text-white/70">
+    © 2025 Akademi
+  </div>
+</aside>
   );
 }

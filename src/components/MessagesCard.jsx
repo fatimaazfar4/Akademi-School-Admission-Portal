@@ -35,28 +35,27 @@ const messagesData = [
 
 export default function MessagesCard() {
   return (
-    <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
+    <div className="p-6 h-full flex flex-col">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-xl font-bold text-gray-800">Messages</h3> {/* Title style as per images */}
+        <h3 className="text-xl font-bold text-gray-800">Messages</h3>
       </div>
 
       {/* Message List */}
-      {/* Using space-y-0 and explicit py- for precise vertical spacing and borders */}
-      <div className="space-y-0">
+      <div className="space-y-0 flex-1 overflow-y-auto">
         {messagesData.map((message) => (
-          <div key={message.id} className="flex items-center py-3 border-b border-gray-100 last:border-b-0">
-            {/* Avatar */}
+          <div
+            key={message.id}
+            className="flex items-center py-3 border-b border-gray-100 last:border-b-0"
+          >
             <div
               className="w-11 h-11 rounded-full mr-3 flex-shrink-0"
               style={{ backgroundColor: message.avatarBg }}
             ></div>
-            {/* Message Details */}
             <div className="flex-1">
               <p className="font-semibold text-gray-900">{message.sender}</p>
               <p className="text-sm text-gray-500 truncate">{message.preview}</p>
             </div>
-            {/* Timestamp */}
             <span className="text-xs text-gray-400 flex-shrink-0 ml-4">
               {message.time}
             </span>
@@ -64,7 +63,7 @@ export default function MessagesCard() {
         ))}
       </div>
 
-      {/* View More Button */}
+      {/* View More */}
       <button className="w-full py-3.5 mt-6 text-lg font-semibold text-[#5D3FD3] bg-[#F3F4F6] rounded-xl hover:bg-[#E9EBEE] transition-colors">
         View More
       </button>
