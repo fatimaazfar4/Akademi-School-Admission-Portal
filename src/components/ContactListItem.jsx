@@ -2,8 +2,8 @@ import React from "react";
 
 export default function ContactListItem({ Color, Title, Chat, Recent, Date }) {
   return (
-    <div className="flex justify-between w-full h-[80px] border-b-2 border-[#C1BBEB]">
-      <div className="flex items-center gap-x-4">
+    <div className="flex justify-between w-full h-[80px] border-b-2 my-7  border-[#C1BBEB]">
+      <div className="flex items-center  gap-x-4  " >
         <div
           className=" w-[55px] h-[55px] rounded-full   "
           style={{ backgroundColor: Color }}
