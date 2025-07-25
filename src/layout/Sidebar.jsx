@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { Home, DollarSign, MessageSquare, Activity, User, Calendar } from "lucide-react";
+import { Home, DollarSign, MessageSquare, Activity, User, Calendar, UserCheck } from "lucide-react";
 
 const links = [
   { to: "/", label: "Dashboard", icon: <Home size={20} /> },
   { to: "/students", label: "Students", icon: <User size={20} /> },
+  { to: "/teachers", label: "Teachers", icon: <UserCheck size={20} /> },
   { to: "/finance", label: "Finance", icon: <DollarSign size={20} /> },
   { to: "/chat", label: "Chat", icon: <MessageSquare size={20} /> },
   { to: "/latest-activity", label: "Activity", icon: <Activity size={20} /> },
