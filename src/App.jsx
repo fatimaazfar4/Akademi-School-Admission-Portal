@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Dashboard from "./pages/Dashboard";
+import Students from "./pages/Students";
+import StudentDetails from "./pages/StudentDetails";
+import AddStudent from "./pages/AddStudent";
 import Finance from "./pages/Finance";
 import Chat from "./pages/Chat";
 import LatestActivity from "./pages/LatestActivity";
@@ -15,6 +18,9 @@ export default function App() {
         {/* Wrap all routes inside Layout */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
+          <Route path="students" element={<Students />} />
+          <Route path="students/:name" element={<StudentDetails />} />
+          <Route path="/add-student" element={<AddStudent />} />
           <Route path="finance" element={<Finance />} />
           <Route path="chat" element={<Chat />} />
           <Route path="latest-activity" element={<LatestActivity />} />
