@@ -6,12 +6,14 @@ import StudentDetails from "./pages/StudentDetails";
 import AddStudent from "./pages/AddStudent";
 import Teachers from "./pages/Teacher";
 import AddTeacher from "./pages/AddTeacher";
+import TeacherDetails from "./pages/TeacherDetails";
 import Finance from "./pages/Finance";
 import Chat from "./pages/Chat";
 import LatestActivity from "./pages/LatestActivity";
 import Food from "./pages/Food";
 import User from "./pages/User";
 import Event from "./pages/Event";
+
 
 export default function App() {
   return (
@@ -25,6 +27,7 @@ export default function App() {
           <Route path="/add-student" element={<AddStudent />} />
           <Route path="teachers" element={<Teachers />} />
           <Route path="/add-teacher" element={<AddTeacher />} />
+          <Route path="teachers/:name" element={<TeacherDetails />} />
           <Route path="finance" element={<Finance />} />
           <Route path="chat" element={<Chat />} />
           <Route path="latest-activity" element={<LatestActivity />} />

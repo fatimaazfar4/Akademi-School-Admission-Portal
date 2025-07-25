@@ -20,6 +20,11 @@ const Teachers = () => {
 
   const displayedData = TeachersData.slice(0, 12);
 
+
+  const handleRowClick = (teacher) => {
+    navigate(`/teachers/${encodeURIComponent(teacher.name)}`, { state: teacher });
+  };
+
   return (
     <div className="p-4 md:p-5 w-full bg-[#f7f7fb] min-h-screen">
       {/* Heading */}
@@ -72,7 +77,8 @@ const Teachers = () => {
         {displayedData.map((teacher, index) => (
           <div
             key={index}
-            className="relative bg-white rounded-xl shadow-sm px-4 py-5 flex flex-col items-center gap-2 "
+            className="relative bg-white rounded-xl shadow-sm px-4 py-5 flex flex-col items-center gap-2 cursor-pointer hover:shadow-md transition"
+            onClick={() => handleRowClick(teacher)}
           >
             <div className="absolute top-2 right-3 text-xl text-gray-400 cursor-pointer">
               ...
