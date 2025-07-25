@@ -15,7 +15,6 @@ import { useNavigate } from "react-router-dom";
 const THEME = "#4d44b5";
 
 const Teachers = () => {
-  // eslint-disable-next-line
   const [currentPage] = useState(1);
   const navigate = useNavigate();
 
@@ -74,7 +73,10 @@ const Teachers = () => {
           <div
             key={index}
             className="relative bg-white rounded-xl shadow-sm px-4 py-5 flex flex-col items-center gap-2 cursor-pointer hover:shadow-md transition"
-            onClick={() => navigate(`/teachers/${encodeURIComponent(teacher.name)}`)}
+            onClick={() =>
+  navigate(`/teacher-details`, { state: teacher })
+}
+
           >
             <div className="absolute top-2 right-3 text-xl text-gray-400 cursor-pointer">
               ...
