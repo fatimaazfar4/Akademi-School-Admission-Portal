@@ -1,3 +1,11 @@
+import ContactPageContainer from "../components/ContactPageContainer";
+
 export default function Chat() {
-  return <h1>Chat Page</h1>;
+  return (
+    <>
+      <div className=" flex-1  rounded-xl overflow-y-hidden  ">
+        <ContactPageContainer />
+      </div>
+    </>
+  );
 }
