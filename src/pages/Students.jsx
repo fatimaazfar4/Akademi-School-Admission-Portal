@@ -7,6 +7,8 @@ import {
   Mail,
   ChevronLeft,
   ChevronRight,
+  Bell,
+  Settings,
 } from "lucide-react";
 import StudentsData from "../data/StudentsData";
 import { useNavigate } from "react-router-dom";
@@ -32,13 +34,38 @@ const Students = () => {
 
   return (
     <div className="p-4 md:p-5 w-full bg-[#f7f7fb] min-h-screen">
-      {/* Heading */}
-      <h1
-        className="font-bold mb-3 text-[24px]"
-        style={{ color: "#343d75" }}
-      >
-        Students
-      </h1>
+      {/* Top Header Bar */}
+      <div className="flex items-center justify-between px-6 pt-2 pb-6">
+        <h1 className="text-3xl font-extrabold text-[#232360] tracking-wide">
+          Students
+        </h1>
+
+        <div className="flex items-center gap-6">
+          {/* Search Bar */}
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search here..."
+              className="pl-10 pr-4 py-2 rounded-full bg-white border border-[#E0E0F0] text-base text-[#232360] w-64 focus:outline-none focus:ring-2 focus:ring-[#5B4FFF]"
+            />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#B0B3C7]" size={20} />
+          </div>
+
+          <Bell className="text-[#B0B3C7]" size={22} />
+          <Settings className="text-[#B0B3C7]" size={22} />
+
+          {/* Profile */}
+          <div className="flex items-center gap-2 bg-[#F6F7FB] px-3 py-1 rounded-full">
+            <div className="w-9 h-9 bg-[#B0B3C7] rounded-full flex items-center justify-center text-white font-bold text-lg">
+              FA
+            </div>
+            <div className="text-right">
+              <div className="text-sm font-bold text-[#232360]">Nabila A.</div>
+              <div className="text-xs text-[#B0B3C7]">Admin</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Search + Buttons */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
@@ -124,14 +151,8 @@ const Students = () => {
                   className="accent-[#c1bbeb] w-3.5 h-3.5"
                 />
               </div>
-              <div
-                className="flex items-center gap-2 font-semibold"
-                style={{ color: "#303972" }}
-              >
-                <div
-                  className="w-6 h-6 rounded-full"
-                  style={{ backgroundColor: "#c1bbeb" }}
-                ></div>
+              <div className="flex items-center gap-2 font-semibold" style={{ color: "#303972" }}>
+                <div className="w-6 h-6 rounded-full" style={{ backgroundColor: "#c1bbeb" }}></div>
                 {student.name}
               </div>
               <div style={{ color: "#303972" }}>{student.id}</div>
@@ -160,9 +181,7 @@ const Students = () => {
                   {student.grade}
                 </span>
               </div>
-              <div className="text-[#4d44b5] cursor-pointer text-[15px] pl-3">
-                ...
-              </div>
+              <div className="text-[#4d44b5] cursor-pointer text-[15px] pl-3">...</div>
             </div>
           ))}
         </div>
@@ -175,32 +194,19 @@ const Students = () => {
           </p>
           <div className="flex items-center gap-1.5">
             <ChevronLeft size={14} style={{ color: "#aaa" }} />
-            <button
-              className="w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-medium"
-              style={{ backgroundColor: THEME, color: "#fff" }}
-            >
-              1
-            </button>
-            <button
-              className="w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-medium"
-              style={{
-                backgroundColor: "#fff",
-                border: `1px solid ${THEME}`,
-                color: THEME,
-              }}
-            >
-              2
-            </button>
-            <button
-              className="w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-medium"
-              style={{
-                backgroundColor: "#fff",
-                border: `1px solid ${THEME}`,
-                color: THEME,
-              }}
-            >
-              3
-            </button>
+            {[1, 2, 3].map((num) => (
+              <button
+                key={num}
+                className="w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-medium"
+                style={{
+                  backgroundColor: num === 1 ? THEME : "#fff",
+                  color: num === 1 ? "#fff" : THEME,
+                  border: num !== 1 ? `1px solid ${THEME}` : "none",
+                }}
+              >
+                {num}
+              </button>
+            ))}
             <ChevronRight size={14} style={{ color: "#aaa" }} />
           </div>
         </div>
