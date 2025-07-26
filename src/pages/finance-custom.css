@@ -1,0 +1,103 @@
+.unpaid-row {
+  border-bottom: 1px solid #F0F0F0;
+  min-height: 64px;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: inherit;
+  background: none;
+}
+.unpaid-row:last-child {
+  border-bottom: none;
+}
+.unpaid-row > div {
+  vertical-align: middle;
+}
+.unpaid-avatar {
+  width: 40px;
+  height: 40px;
+  background: #C7C9F9;
+  opacity: 0.8;
+  border-radius: 9999px;
+  margin-right: 0;
+}
+.unpaid-name {
+  font-weight: 700;
+  color: #232360;
+  text-align: left;
+}
+.unpaid-id {
+  color: #5548C8;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+}
+.unpaid-class {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.unpaid-class span {
+  font-size: 15px;
+}
+.unpaid-amount {
+  font-weight: 700;
+  color: #232360;
+  text-align: right;
+}
+.unpaid-menu {
+  text-align: right;
+  color: #B0B3C7;
+  font-size: 24px;
+  cursor: pointer;
+}
+.unpaid-page-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  border: 2px solid #C7C9F9;
+  background: #fff;
+  color: #5548C8;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+}
+.unpaid-page-btn.active {
+  background: #5548C8;
+  color: #fff;
+  border: 2px solid #5548C8;
+}
+.unpaid-page-btn:hover {
+  background: #F6F7FB;
+}
+.unpaid-page-arrow {
+  color: #B0B3C7;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.unpaid-card {
+  max-width: 520px;
+  min-width: 480px;
+  box-sizing: border-box;
+  padding: 0;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(44,62,80,0.08);
+}
+@media (max-width: 900px) {
+  .unpaid-row {
+    grid-template-columns: 32px 1fr 1fr 1fr 1fr 24px;
+    font-size: 14px;
+  }
+  .unpaid-avatar {
+    width: 32px;
+    height: 32px;
+  }
+} 

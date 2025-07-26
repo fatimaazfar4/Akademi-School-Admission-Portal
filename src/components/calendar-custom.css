@@ -39,3 +39,144 @@
   background-color: #f3f4f6; /* gray-100 */
   border-radius: 9999px;
 }
+
+/* Pixel-perfect calendar styles for Event page */
+
+.akademi-calendar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* Restore previous calendar panel/button/dropdown styles */
+
+/* Pixel-perfect calendar panel and grid for your reference */
+
+.akademi-calendar-panel {
+  width: 820px;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.08);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.akademi-calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 32px 0;
+}
+.akademi-calendar-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #232360;
+  margin: 0;
+  height: 48px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.akademi-calendar-dropdown, .akademi-calendar-btn {
+  height: 48px;
+  border-radius: 9999px;
+  font-size: 20px;
+  font-weight: 700;
+  align-items: center;
+  margin: 0;
+  padding: 0 28px;
+  gap: 10px;
+  display: flex;
+}
+.akademi-calendar-dropdown {
+  border: 2px solid #5548C8;
+  background: #fff;
+  color: #5548C8;
+}
+.akademi-calendar-btn {
+  background: #5548C8;
+  color: #fff;
+  border: none;
+}
+.akademi-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 72px);
+  gap: 16px;
+  justify-content: center;
+  margin-top: 8px;
+}
+.akademi-calendar-cell {
+  width: 72px;
+  height: 88px;
+  border-radius: 16px;
+  border: 2px solid #E0E0F0;
+  background: #fff;
+  color: #232360;
+  font-size: 20px;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+.akademi-calendar-cell.selected {
+  border: 3.5px solid #5548C8;
+  background: #fff;
+  color: #232360;
+  font-weight: 800;
+}
+.akademi-calendar-cell.orange-bg {
+  background: #FF7A00;
+  color: #fff;
+  border: 2px solid #FF7A00;
+}
+.akademi-calendar-cell.yellow-border {
+  border: 2px solid #FFD600;
+}
+.akademi-calendar-cell.faded {
+  color: #C7C9D9;
+  background: #F6F7FB;
+}
+.akademi-calendar-cell .akademi-bar {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 6px;
+  border-radius: 6px;
+}
+.akademi-calendar-cell .akademi-dot-row {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.akademi-calendar-cell .akademi-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+.akademi-calendar-cell .akademi-cell-text {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 4px;
+  color: inherit;
+}
+
+.akademi-calendar-days-row {
+  display: grid;
+  grid-template-columns: repeat(7, 72px);
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+  width: auto;
+}
