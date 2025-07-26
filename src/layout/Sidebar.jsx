@@ -9,12 +9,13 @@ import {
   Users,
   BookOpen,
   Utensils,
+  UserCheck,
 } from "lucide-react";
 
 const links = [
   { to: "/", label: "Dashboard", icon: <Home size={20} /> },
   { to: "/students", label: "Students", icon: <Users size={20} /> },
-  { to: "/teachers", label: "Teachers", icon: <BookOpen size={20} /> },
+  { to: "/teachers", label: "Teachers", icon: <UserCheck size={20} /> },
   { to: "/event", label: "Event", icon: <Calendar size={20} /> },
   { to: "/finance", label: "Finance", icon: <DollarSign size={20} /> },
   { to: "/food", label: "Food", icon: <Utensils size={20} /> },
