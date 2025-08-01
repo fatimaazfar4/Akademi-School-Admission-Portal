@@ -6,7 +6,7 @@ A modern, responsive dashboard web app for managing student admissions, messages
 
 ## 📸 Preview
 
-![Dashboard Preview](https://akademi-school-admission-portal.vercel.app/)
+https://akademi-school-admission-portal.vercel.app/
 
 ---
 
