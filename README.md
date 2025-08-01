@@ -1,12 +1,47 @@
-# React + Vite
+# 🏫 Akademi School Admission Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive dashboard web app for managing student admissions, messages, tuition, and school-related activities. Built during the **Verior Summer Codelab Internship** using React + Vite and styled with Tailwind CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Preview
 
-## Expanding the ESLint configuration
+![Dashboard Preview](https://akademi-school-admission-portal.vercel.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- 📋 **Student Admissions Overview**
+- 💬 **Recent Messages and Student Cards**
+- 💰 **Tuition & Payment Status Cards**
+- 🍽️ **Food Menu Summary**
+- 📅 **Activities Calendar**
+- 🔔 **Header with Notifications & Profile**
+- 
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology     | Usage                        |
+|----------------|------------------------------|
+| React (Vite)   | Frontend framework           |
+| Tailwind CSS   | Styling                      |
+| Lucide Icons   | Icon set                     |
+| Figma          | Design reference             |
+| Git & GitHub   | Version control              |
+
+---
+
+## 📁 Project Structure
+src/
+├── assets/ # Static images and icons
+├── components/ # Reusable UI components (Cards, Header, Footer)
+├── pages/ # Main page views (e.g., Dashboard.jsx)
+├── App.jsx # Root component
+└── main.jsx # Entry point
+
+---
+
+
